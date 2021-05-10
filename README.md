@@ -2,7 +2,7 @@
 Hi and welcome to the Robot Friends projekt!
 This simple website is built using React framework and some simple CSS.
 
-To run the app just simply run `npm start` in the terminal when being in the source file directory.
+To run the app just simply run `npm start` in the terminal while being in the source file directory of this repo.
 
 ~ * ----- * ~
 
