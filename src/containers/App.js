@@ -8,36 +8,16 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import './App.css';
 
 
-/* const mapStateToProps = state => {
-  return {
-    searchField: state.searchRobots.searchField,
-    robots: state.requestRobots.robots,
-    isPending: state.requestRobots.isPending,
-    error: state.requestRobots.error
-  }
-}
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    onSearchChange: (event) => dispatch(setSearchField(event.target.value)),
-    onRequestRobots: () => dispatch(requestRobots())   // same as: requestRobots(dispatch)
-  }
-} */
-
-
 const App = () => {
   const dispatch = useDispatch();
 
   const { searchField } = useSelector(state => state.searchRobots)
-    
+
   const { robots, isPending, error } = useSelector (state => state.requestRobots)
 
   useEffect(() => {
       onRequestRobots()
     }, []);
-
-  /* const [robots, setRobots] = useState([]); */
-  /* const [searchField, setSearchField] = useState(''); */
 
   const onSearchChange = (event) => {
     dispatch(setSearchField(event.target.value));
